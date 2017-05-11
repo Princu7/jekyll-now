@@ -29,7 +29,7 @@ One desired functionality that has been pending from a long time is the integrat
 the orga server. We want the give the organizer, the facility to generate the webapp for an event directly on the server itself,
 at the click of a button. The proposed workflow can be described with the help of an image below
 
-![Integration with Orga Server](images/microservice.png)
+![Integration with Orga Server](../images/microservice.png)
 
 
 Speed is a feature which is desired across most of the domains. No one likes slugginess. No one likes latency. The webpages generated
@@ -41,7 +41,38 @@ we check our cache for that asset and if it exists, then it is directly returned
 When the cached assets increases, the dependecy on the network decreases to the point where no internet is required for the
 app to run. That's the power of service workers. This diagram taken from the mozilla docs accurately captures the gist of service
 workers:
-![Caching Process](images/cachingprocess.png)
+![Caching Process](../images/cachingprocess.png)
+
+Psuedo Code:
+
+Installing and activating service workers
+
+```
+
+self.addEventListener('install', event => {
+  // Do install stuff
+});
+
+self.addEventListener('activate', event => {
+  // Do activate stuff: This will come later on.
+  });
+
+```
+
+Using Caching:
+
+```
+
+self.addEventListener('fetch', function(resource) {
+ if resourceBeenCached() {
+   return cachedResource
+ }
+ else {
+    fetchResourceFromNetwork()
+    addResourceToCache()
+ }
+
+```
 
 
 
@@ -50,7 +81,7 @@ user retention. What essential featuers are missing that should be provided in a
 event based app? One thing which is quite obvious is the lack of notifications about the bookmared sessions. This feature
 is available on the android app and is been missing from the webapp. It would be a fantastic addition to the
 webapp. It will help the users/speakers to receive notifications before the commencement of a session and remind them about it.
-![Push Notification Button](images/flowchart.png)
+![Push Notification Button](../images/flowchart.png)
 session. At the end of the summer, I hope we can show a notification similar to this:
 
-![Notification](images/push_notification.png)
+![Notification](../images/push_notification.png)
