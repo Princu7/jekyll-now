@@ -1,10 +1,4 @@
-**Thanks FOSSASIA!!**
-
-### Judgement Day
-
-The clocks was ticking, the heart was racing. Finally, it was time. After months of development, it all came down to
-this. The results were live. Tried opening the GSoC portal. It crashed. Expected. Gave it few more trials. Finally, it logged in
-and there it was. My proposal was now a GSoC Project. The emotions went high and gave way to unbounded joy.
+I have been selected to work on the Webapp component of the open event project under FOSSASIA and I can't be more excited about it. **Thanks FOSSASIA!!**
 
 ### A bit of background about the Open Event Project:
 
@@ -29,9 +23,13 @@ who will generate the event app on both the platforms. Every event can also be a
 
 I will be working on the improvement and enhancement of the open-
 event-webapp. Being involved in the development process for a while, I had some ideas to
-improve the project further. One desired functionality that has been pending from a long time is the integration of the webapp with
+further improve the project.
+
+One desired functionality that has been pending from a long time is the integration of the webapp with
 the orga server. We want the give the organizer, the facility to generate the webapp for an event directly on the server itself,
-at the click of a button. Pictures speak a thousand words. Check it out:
+at the click of a button. The proposed workflow can be described with the help of an image below
+
+![Integration with Orga Server](images/microservice.png)
 
 
 Speed is a feature which is desired across most of the domains. No one likes slugginess. No one likes latency. The webpages generated
@@ -43,6 +41,7 @@ we check our cache for that asset and if it exists, then it is directly returned
 When the cached assets increases, the dependecy on the network decreases to the point where no internet is required for the
 app to run. That's the power of service workers. This diagram taken from the mozilla docs accurately captures the gist of service
 workers:
+![Caching Process](images/cachingprocess.png)
 
 
 
@@ -51,7 +50,7 @@ user retention. What essential featuers are missing that should be provided in a
 event based app? One thing which is quite obvious is the lack of notifications about the bookmared sessions. This feature
 is available on the android app and is been missing from the webapp. It would be a fantastic addition to the
 webapp. It will help the users/speakers to receive notifications before the commencement of a session and remind them about it.
+![Push Notification Button](images/flowchart.png)
 session. At the end of the summer, I hope we can show a notification similar to this:
 
-### Damn You Exams!!
-Presently, my end-semester exams are going on. It's difficult to take out some spare time during this period. Needless to say, I will be more consistent with my contributions in the upcoming weeks.
+![Notification](images/push_notification.png)
