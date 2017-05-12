@@ -132,9 +132,9 @@ With the help of push notifications, we can send a reminder to the user/speaker 
 
 There are three factors involved with delivering a push notification:-
 
-1. Push Notification Service: Each browser, including Chrome, Safari and Firefox have their own notification delivery service. Chrome uses Google Cloud Messaging ( and now Firebase Cloud Messaging ), Safari user Apple Push Notification Service ( APNS ) and Firefox uses their own messaging server.
+1. Push Notification Service: Each browser, including Chrome, Safari and Firefox have their own notification delivery service. Chrome uses Google Cloud Messaging ( and now Firebase Cloud Messaging ), Safari uses Apple Push Notification Service ( APNS ) and Firefox uses their own messaging server.
 
-2. Service Worker Registration: Developer must register the service worker on the browser
+2. Service Worker Registration: User must register the service worker on the browser
 
 3. User’s Subscription ID: Subscriber ID is generated when a user opts in to receive notifications from a specific website.
 
