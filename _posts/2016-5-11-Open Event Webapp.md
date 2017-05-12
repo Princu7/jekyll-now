@@ -1,4 +1,4 @@
-I have been selected to work on the Webapp component of the open event project under FOSSASIA and I couldn't be more excited about it. **Thanks FOSSASIA!!**
+I have been selected to work on the Webapp component of the open event project under FOSSASIA and I couldn't be more excited about it. Thanks FOSSASIA!!
 
 ### A bit of background about the Open Event Project:
 
@@ -34,7 +34,7 @@ at the click of a button. The proposed workflow can be described with the help o
 ![Integration with Orga Server](../images/microservice.png)
 
 
-**Pusedo Code**:
+**Psuedo Code**:
 
 POST Request sent from the orga-server:
 
@@ -121,15 +121,23 @@ self.addEventListener('fetch', function(resource) {
 
 ```
 
-
-
 #### Push Notifications
-We need to think of ways to increase our
-user retention. What essential featuers are missing that should be provided in a
-event based app? One thing which is quite obvious is the lack of notifications about the bookmared sessions. This feature
-is available on the android app and is been missing from the webapp. It would be a fantastic addition to the
-webapp. It will help the users/speakers to receive notifications before the commencement of a session and remind them about it.
+The bookmark feature of web-app isn't much up to the mark. There are no notifications displayed for the starred sessions. How can we make this better? How can we implement real time live notifications?
+
+Answer: Push Notifications. It is a new technology requiring the use of service workers.Web push notifications are clickable messages sent to a browser on your device. These notifications can only be sent to users who have subscribed for these notifications. As these notifications are pushed to subscriber’s browser, subscribers don’t have to be present on your website to receive these notifications. Users can subscribe and receive these notifications on mobile, desktop and tablet.
+
 ![Push Notification Button](../images/notificationButton.jpg)
-session. At the end of the summer, I hope we can show a notification similar to this:
+
+With the help of push notifications, we can send a reminder to the user/speaker before the start of a bookmarked session.
+
+There are three factors involved with delivering a push notification:-
+
+1. Push Notification Service: Each browser, including Chrome, Safari and Firefox have their own notification delivery service. Chrome uses Google Cloud Messaging ( and now Firebase Cloud Messaging ), Safari user Apple Push Notification Service ( APNS ) and Firefox uses their own messaging server.
+
+2. Service Worker Registration: Developer must register the service worker on the browser
+
+3. User’s Subscription ID: Subscriber ID is generated when a user opts in to receive notifications from a specific website.
+
+At the end of the summer, I hope we can show a notification similar to this:
 
 ![Notification](../images/push_notification.png)
